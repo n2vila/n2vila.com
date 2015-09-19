@@ -31,6 +31,13 @@ activate :directory_indexes
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
 ###
+# Data
+###
+
+# Create a "site" variable with data supplied from site.yml
+set :site, Struct.new(*data.site.keys.map(&:to_sym)).new(*data.site.values)
+
+###
 # Helpers
 ###
 
@@ -50,9 +57,7 @@ end
 # end
 
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 # Build-specific configuration

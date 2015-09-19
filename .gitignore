@@ -13,8 +13,9 @@
 # Ignore article files
 /source/posts
 
-# Ignore data
+# Ignore data, except site configuration
 /data/*.yml
+!/data/site.yml
 
 # Ignore cache
 /.sass-cache
