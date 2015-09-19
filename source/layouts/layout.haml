@@ -2,4 +2,10 @@
 %html{lang: "en"}
   = partial "layouts/head"
   %body
-    = yield
+    = partial "layouts/icons"
+    = partial "layouts/header"
+
+    %main{role: "main"}
+      = yield
+
+    = partial "layouts/footer"
