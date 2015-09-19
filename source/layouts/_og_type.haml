@@ -1,0 +1,11 @@
+- if type
+  %meta{property: "og:type", content: type}
+- if author
+  %meta{name: "author", content: author}
+  %meta{property: "article:author", content: author}
+- if category
+  %meta{property: "article:section", content: category}
+- if date
+  %meta{property: "article:date", content: date}
+- if tags
+  %meta{property: "article:tag", content: tags}

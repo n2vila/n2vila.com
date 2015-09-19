@@ -1,0 +1,10 @@
+- if url
+  %meta{property: "og:image", content: url}
+- if url && unique
+  %meta{property: "twitter:image", content: url}
+- if height
+  %meta{property: "og:image:height", content: height}
+- if width
+  %meta{property: "og:image:width", content: width}
+- if type
+  %meta{property: "og:image:type", content: type}
