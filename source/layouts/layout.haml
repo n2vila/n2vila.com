@@ -6,6 +6,12 @@
     = partial "layouts/header"
 
     %main{role: "main"}
-      = yield
+      .row
+        .cell.well
+          .g
+            %section.g-b.g-b--m--2of3
+              = yield
+            %aside.g-b.g-b--m--1of3
+              %p Aside
 
     = partial "layouts/footer"
