@@ -10,7 +10,10 @@
         .cell.well
           .g
             %section.g-b.g-b--m--2of3
+              - if current_page.data.title
+                %h1#title= current_page.data.title
               = yield
+
             %aside.g-b.g-b--m--1of3
               %p Aside
 
