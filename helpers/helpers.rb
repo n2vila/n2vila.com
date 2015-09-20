@@ -1,5 +1,12 @@
 module Helpers
 
+  def get_articles
+    sitemap.where(layout: "article")
+      .order_by(:date)
+      .all
+      .reverse
+  end
+
   def meta_page_image
     if current_page.data.image
       locals = {

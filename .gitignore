@@ -11,7 +11,7 @@
 /build
 
 # Ignore article files
-/source/posts
+/source/201*
 
 # Ignore data, except site configuration
 /data/*.yml

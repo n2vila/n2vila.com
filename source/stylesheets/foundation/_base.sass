@@ -10,7 +10,7 @@ html
   color: $c-text
   font-family: $b-fontFamily
   font-size: $b-fontSize
-  letter-spacing: 0.5px
+  // letter-spacing: 0.5px
   line-height: $b-lineHeight
 
 body
@@ -35,9 +35,9 @@ h2, .h2,
 h3, .h3,
 h4, .h4
   font-family: $b-fontFamily-heading
-  font-weight: bold
+  font-weight: normal
   line-height: 1.2
-  margin-bottom: $b-space-xs
+  margin-bottom: 1rem
   margin-top: 0
 
 h1, .h1
@@ -59,14 +59,12 @@ h4, .h4
 // ----- Links ----- //
 
 a
-  border-bottom: $b-borderWidth $b-borderStyle $c-highlight
   color: $c-highlight
-  text-decoration: none
-  transition: border-bottom-color 0.2s, color 0.2s
+  text-decoration: underline
+  transition: color 0.2s
 
   &:hover,
   &:focus
-    border-bottom-color: $c-text
     color: $c-text
 
 // ----- Images ----- //

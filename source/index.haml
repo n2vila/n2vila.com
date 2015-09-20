@@ -1,2 +1,21 @@
-%h1 AJ Foster
-%p Some content
+---
+stuff: article
+---
+.mbl
+  %h1 AJ Foster
+  %p Hello there! I'm AJ, a web developer and graduate student in Mathematical Science at the University of Central Florida.
+
+.mbl
+  %h3 A little about me...
+  %p.mbf My interests include backend development with Ruby on Rails, making life easier with server-side automation, and Mathematics. In the past I've worked on WordPress sites and performed basic system management. Offline, you might occassionally find me at a FIRST robotics event as a volunteer.
+  %p= link_to "Read a little more...", "/about"
+
+.mbl
+  %h3 Things I've written
+  - get_articles.each do |article|
+    %p
+      %a{href: article.url}= article.data.title
+      %br/
+      %strong.tss= article.data.date.strftime("%B %-d, %Y")
+      &mdash;
+      = article.data.description
