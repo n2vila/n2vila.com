@@ -15,7 +15,7 @@
               - if current_page.data.description
                 %p
                   %em= current_page.data.description
-              = yield
+              ~ yield
               .tombstone
 
             %aside.g-b.g-b--m--1of3
