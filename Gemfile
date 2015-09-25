@@ -15,3 +15,6 @@ gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
 # Autoprefixer for Sass
 gem "middleman-autoprefixer"
+
+# Syntax Highlighting
+gem "middleman-syntax"

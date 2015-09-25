@@ -25,6 +25,9 @@
 # end
 
 activate :directory_indexes
+activate :syntax
+
+set :markdown_engine, :kramdown
 
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
