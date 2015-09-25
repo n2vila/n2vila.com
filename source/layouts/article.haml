@@ -1,0 +1,36 @@
+!!! 5
+%html{lang: "en"}
+  = partial "layouts/head"
+  %body
+    = partial "layouts/icons"
+    = partial "layouts/header"
+
+    %main{role: "main"}
+      .row
+        .cell.well
+          .g
+            %section.g-b.g-b--m--2of3
+              - if current_page.data.title
+                %h1#title= current_page.data.title
+              - if current_page.data.description
+                %p
+                  %em= current_page.data.description
+              = yield
+              .tombstone
+
+            %aside.g-b.g-b--m--1of3
+              %h3 About this Post
+              - if current_page.data.date
+                %p.mbf
+                  %strong Published:
+                  = current_page.data.date.strftime("%B %-d, %Y")
+              - if current_page.data.category
+                %p
+                  %strong Category:
+                  = current_page.data.category
+              - if current_page.data.notes
+                %p
+                  %strong Notes:
+                  = current_page.data.notes
+
+    = partial "layouts/footer"
