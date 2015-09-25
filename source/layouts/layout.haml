@@ -5,21 +5,20 @@
     = partial "layouts/icons"
     = partial "layouts/header"
 
-    %main{role: "main"}
-      .row
-        .cell.well
-          .g
-            %section.g-b.g-b--m--2of3
-              - if current_page.data.title
-                %h1#title= current_page.data.title
-              = yield
+    %main.row{role: "main"}
+      .cell.well
+        .g
+          %section.g-b.g-b--m--2of3
+            - if current_page.data.title
+              %h1#title= current_page.data.title
+            = yield
 
-            %aside.g-b.g-b--m--1of3
-              %h3 Recent Projects
-              - data.recent[0..6].each do |i|
-                %p
-                  %strong= i.date
-                  &mdash;
-                  = i.text
+          %aside.g-b.g-b--m--1of3
+            %h3 Recent Projects
+            - data.recent[0..6].each do |i|
+              %p
+                %strong= i.date
+                &mdash;
+                = i.text
 
     = partial "layouts/footer"
