@@ -15,6 +15,11 @@
               = yield
 
             %aside.g-b.g-b--m--1of3
-              %p Aside
+              %h3 Recent Projects
+              - data.recent[0..6].each do |i|
+                %p
+                  %strong= i.date
+                  &mdash;
+                  = i.text
 
     = partial "layouts/footer"
