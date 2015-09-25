@@ -1,0 +1,25 @@
+---
+layout: false
+---
+<% pages = sitemap.resources.find_all{|p| p.source_file.match(".haml") } %>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://aj-foster.com/</loc>
+    <priority>1.0</priority>
+    <lastmod><%= Date.today.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aj-foster.com/about/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+<% get_articles.each do |p| %>
+  <url>
+    <loc><%= "#{site.url}/#{p.destination_path.gsub('index.html','')}" %></loc>
+    <priority>0.5</priority>
+    <lastmod><%= p.data.date.strftime("%Y-%m-%d") %></lastmod>
+  </url>
+<% end %>
+</urlset>
