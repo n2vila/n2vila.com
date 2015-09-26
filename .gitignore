@@ -12,6 +12,7 @@
 
 # Ignore article files
 /source/201*
+/source/images/201*
 
 # Ignore data, except site configuration
 /data/*.yml
