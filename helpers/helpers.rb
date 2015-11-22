@@ -4,6 +4,7 @@ module Helpers
     sitemap.where(layout: "article")
       .order_by(:date)
       .all
+      .select{ |a| a.data.published.nil? || a.data.published }
       .reverse
   end
 
