@@ -8,14 +8,13 @@
     %main.row{role: "main"}
       .cell.well
         .g
-          %section.g-b.g-b--m--2of3
+          %section.g-b.g-b--m--2of3.article
             - if current_page.data.title
               %h1#title= current_page.data.title
             - if current_page.data.description
               %p
                 %em= current_page.data.description
             ~ yield
-            .tombstone
 
           %aside.g-b.g-b--m--1of3
             %h3 About this Post
@@ -23,6 +22,8 @@
               %p.mbf
                 %strong Published:
                 = current_page.data.date.strftime("%B %-d, %Y")
+                - if (!current_page.data.published.nil? && !current_page.data.published)
+                  (Draft)
             - if current_page.data.category
               %p
                 %strong Category:
